@@ -1,0 +1,8 @@
+--require spec_helper
+
+--order defined
+--format documentation
+--format html
+--out log/report.html
+--format RspecJunitFormatteR
+--out log/report.xml
