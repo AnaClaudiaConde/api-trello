@@ -10,7 +10,7 @@ Para uma correta execução do projeto certifique de ter o ruby 2.6.* instalado 
 Para instalar o bundler globalmente execute no terminal `gem install -g bundler`.
 
 ### Projeto
-  - heeparty
+  - httparty
   - rspec
   - rspec_junit_formatter
 
