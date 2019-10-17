@@ -1,4 +1,4 @@
-# MyStore
+# API-Trello
 
 Para uma correta execução do projeto certifique de ter o ruby 2.6.* instalado e funcionando na sua máquina, para mais detalhes veja o [link](https://gorails.com/setup/osx/10.14-mojave)
 
