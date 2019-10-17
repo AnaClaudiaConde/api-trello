@@ -1,5 +1,5 @@
-describe "post" do
-
+describe "create list" do
+  
   context "when new list" do
     id_board = 0
 
@@ -10,12 +10,10 @@ describe "post" do
     result.each do |board|
       if board["name"] = "DBServer"
         id_board = board["id"]
-        puts "Result board id: #{id_board}"
         break
       end
     end
 
-    puts "ID board 20 => #{id_board}"
     lists = ["Done", "Testing", "in Progress", "ToDo", "Backlog"]
     
     lists.each do |test|

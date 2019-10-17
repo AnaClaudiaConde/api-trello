@@ -1,11 +1,10 @@
-describe "card_action" do
+describe "card action" do
   id_board = 0
   id_list = 0
   id_card = 0
   result_list = 0
 
   context "when new list" do
-
     result = HTTParty.get(
       "https://api.trello.com/1/members/teste67929748/boards?filter=all&fields=all&lists=none&memberships=none&organization=false&organization_fields=name%2CdisplayName&key=a3db7b8e86c9c0caa17cdcaeebe31e14&token=a0733c9a22fa4e4ca4972c90deb85bf716111c70cc2d5908b72ed61cddcd80b8"
     )
@@ -13,7 +12,6 @@ describe "card_action" do
     result.each do |board|
       if board["name"] = "DBServer"
         id_board = board["id"]
-        puts "Result board id: #{id_board}"
         break
       end
     end
@@ -25,7 +23,6 @@ describe "card_action" do
     result_list.each do |list|
       if list["name"] == "Backlog"
         id_list = list["id"]
-        puts "Result list id: #{id_list}"
         break
       end
     end
@@ -35,7 +32,6 @@ describe "card_action" do
     )
 
     id_card = result.parsed_response["id"]
-    puts "Result id card #{id_card}" 
 
     it { expect(result.response.code).to eql "200"}
   end
@@ -48,7 +44,6 @@ describe "card_action" do
   end
 
   context "move card ToDo" do
-
     result_list.each do |list|
       if list["name"] == "ToDo"
         id_list = list["id"]
@@ -64,7 +59,6 @@ describe "card_action" do
   end
 
   context "move card in Progress" do
-
     result_list.each do |list|
       if list["name"] == "in Progress"
         id_list = list["id"]
@@ -80,7 +74,6 @@ describe "card_action" do
   end
 
   context "move card Testing" do
-
     result_list.each do |list|
       if list["name"] == "Testing"
         id_list = list["id"]
@@ -96,7 +89,6 @@ describe "card_action" do
   end
 
   context "move card Done" do
-
     result_list.each do |list|
       if list["name"] == "Done"
         id_list = list["id"]
